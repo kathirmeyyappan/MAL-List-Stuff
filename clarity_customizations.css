@@ -1,0 +1,1367 @@
+.progress div {
+    position: relative
+}
+.progress div:after {
+    position: absolute;
+    left: -81px;
+    top: calc(50% + -34px);
+    font: 12px Inconsolata, monospace;
+    color: #b3fc86;
+    transform: translateX(-50%);
+    background-color: #000;
+    border-radius: 10%;
+    border: 5px solid #000;
+    margin: 0 0 0 auto;
+    width: 65px
+}
+.data.storage {
+    width: 0;
+    font-size: 0;
+    margin: 0;
+    pointer-events: none
+}
+.data.storage::before {
+    content: "Synopsis";
+    position: absolute;
+    right: 579px;
+    top: calc(50% + 13px);
+    z-index: auto;
+    width: 67px;
+    padding: 4px;
+    background-color: #000;
+    border-radius: 10%;
+    font: 12px Inconsolata, monospace;
+    color: #fca486;
+    text-align: center;
+    transform: translate(50%, -50%);
+    pointer-events: auto
+}
+.data.storage::after {
+    position: absolute;
+    right: 0;
+    top: calc(50% + 57px);
+    z-index: auto;
+    width: 1020px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 21px;
+    padding-right: 20px;
+    --rounding: 0px;
+    border-radius: var(--rounding);
+    background-color: #111211;
+    font: 12px Inconsolata, monospace;
+    color: #9cf5ff;
+    line-height: 1.6;
+    text-align: center;
+    white-space: pre-wrap;
+    opacity: 0;
+    transition: opacity .3s ease
+}
+.data.storage:hover::after {
+    opacity: 1
+}
+@\import "https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Dark%20Mode%20Compressed.css";
+:root {
+    --bg: #222;
+    --bg-dark: #111;
+    --text: white;
+    --text-h: #00ff00;
+    --text-dim: #ddd;
+    --text-dim-h: #646464;
+    --text-dark: #ccc;
+    --icon: #323232;
+    --accent: #ff8000;
+    --btn-bg: none;
+    --btn-bg-h: rgba(20, 20, 20, 1);
+    --btn-head-bg-h: #666;
+    --btn-text-h: #fff;
+    --text-head: #787878;
+    --text-head-h: #f7f7f7;
+    --watching: #2db039;
+    --completed: #26448f;
+    --onhold: #f1c83e;
+    --dropped: #a12f31;
+    --plantowatch: #c3c3c3;
+    --cover-bg: #323232;
+    --edit-btn: #d9d9d9;
+    --checkmark: #9696eb
+}
+[data-query*='status":7'] {
+    --header-border: rgba(115, 0, 10, 0.25)
+}
+[data-query*='status":1'] {
+    --header-border: var(--watching)
+}
+[data-query*='status":2'] {
+    --header-border: var(--completed)
+}
+[data-query*='status":3'] {
+    --header-border: var(--onhold)
+}
+[data-query*='status":4'] {
+    --header-border: var(--dropped)
+}
+[data-query*='status":6'] {
+    --header-border: var(--plantowatch)
+}
+.status-menu-container:before {
+    height: 56px;
+    border-width: 4px 0;
+    border-style: solid;
+    border-color: rgba(115, 0, 10, .25)
+}
+.status-menu:after {
+    left: -4px;
+    top: -47px;
+    border-width: 4px;
+    box-shadow: 0 0 0 4px var(--header-border)
+}
+.fixed .status-menu:after {
+    top: 4px
+}
+body {
+    --character: url(https://image.myanimelist.net/ui/uqwkn3zl0fMrMuaC28cB8Q)
+}
+body {
+    --avatar: url(https://cdn.myanimelist.net/images/userimages/9025957.jpg?t=1600197000)
+}
+.data.tags span a[href*="=Art%2FAnimation"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwBn6wo3BMhxmNN0w_H0mTfE);
+    color: #fff!important
+}
+.data.tags span a[href*="=Hilarious"] {
+    background: url(https://image.myanimelist.net/ui/Ib4E5_WlCthp1VIfw_m5RbmHmUokETRb3l4Q67zlwlzRsdKcsMcaRie-1zskdiC82Qo0a99wBGV7ETCxRX6WB80bccrv2j9vZvezZeIX5u8KryH1F3bjigJguWdq-JTK);
+    color: #fff!important
+}
+.data.tags span a[href*="=Samurai"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPg2_oNBIuI8wGKls-8PGW4);
+    color: #fff!important
+}
+.data.tags span a[href*="=Romance"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKt9NxwfTF8cHBCu85trKvA);
+    color: #fff!important
+}
+.data.tags span a[href*="=Sick%20World"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwGM4uPdqeVOAxVuMlocFn3Qb1OzlJnZoXOzJwKpxBp1d);
+    color: #fff!important
+}
+.data.tags span a[href*="=Isekai(ish)"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCd2y44XiaMLrJ2GsGdP4vgixbxFEK9w_fUuqeyq_tdR);
+    color: #fff!important
+}
+.data.tags span a[href*="=Gang%2FPolice%2FHeist"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwGV5LvSS7mk53PU2beR3TXJ4kBEPl0DMT0qOcEdTj1-X);
+    color: #fff!important
+}
+.data.tags span a[href*="=Emotion"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwDpwAzU-9jvg_LX3zl0BP5vae7j7u3oifDHQt13JniLJ);
+    color: #fff!important
+}
+.data.tags span a[href*="=Historical"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwIOcqhEfjtSYZdc3IoQHDXeWSlWrp4jV2eJZclaQoWZe);
+    color: #fff!important
+}
+.data.tags span a[href*="=S%2B"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwHlIPKBIjUnFu5ceSHSsL2U);
+    color: #fff!important
+}
+.data.tags span a[href*="=Godly%20Dub"] {
+    background: #ff8c00;
+    color: #fff!important
+}
+.data.tags span a[href*="=Time%20Travel"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwMUt-l6kAprWx72CHArK3-8);
+    color: #fff!important
+}
+.data.tags span a[href*="=OP%20Protagonist"] {
+    background: url(https://image.myanimelist.net/ui/fRjl5Horvyhr0osqcnz5nPkA5TjWc27gF18V8oIHVMkwLT4z85vDlwj81rpeR0okfIsJjcE7QmACC5xvr4jh7rp0H3iGnRensl4BnOiDY0BAg14ogB3xynVoEN6nZqpTz6X1t2dEkesgKBACiajEZDWMCEzumQ4ChN67F9M2hb3HnUw4aZP71-zi-hnIFBhkkL5myWx5TY4CNaH60Cz6mBpOD9NIGNBF4URyb_twGi7b6n8cNGQi-3CZD3b-jqem-o-cDUld5O1NmrR7s5JZXIcVtV5TRqsbzca1MjFOAr-glHETFjEWIDFIU1atOuUhq7uz6JesG3qGZX-CFupk5kWUAfnKeMF2HYwNfsjGdl_v6tk1-xxlkZjRrSsx-hDQ44hylInUDjkXst9k2gUllO682_ATuPogKmwNoMcxxXV9HIqfcSzM4UIKGICQ-v6vS4WEGPj_kHKWwjdIiXtigG53Qs4sVnfrMerA5uBMqP_KuApxYy5HhziQeFi-kcoH-YRpNW2ZumOnPY-NNRAazL-u6pGKD2__B-1WvigG1ZRfmcPa-jgWe_XZpfk5iHl3I_sF1cHR3-0mt1-GBvq8LO0pURHjvvF90ixzPUmaZtSwyX1rtaZYsWhfvo_jfSS6);
+    color: #fff!important
+}
+.data.tags span a[href*="=Amazing%20OST"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPr5UaPNmsmI_W-1zlqWcAY);
+    color: #fff!important
+}
+.data.tags span a[href*="=Dark"] {
+    background: #000;
+    color: #fff!important
+}
+.data.studio span a[href$="/2"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPxITE1r6-QZ-wrlYYKSNy8);
+    color: #fff!important
+}
+.data.studio span a[href$="/4"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwGjjuhg2N-9rVUXYi1wAsmA);
+    color: #fff!important
+}
+.data.studio span a[href$="/314"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwJULBQlMmNZp0B4-BXrBX30);
+    color: #fff!important
+}
+.data.studio span a[href$="/11"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwFlYoFHinJczwg5GTKpbx68);
+    color: #fff!important
+}
+.data.studio span a[href$="/858"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwHmdiPNMS-BzV4PPN3DkWww);
+    color: #fff!important
+}
+.data.studio span a[href$="/43"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKdB_IdXQnm9KqLqhvc--w8);
+    color: #fff!important
+}
+.data.studio span a[href$="/56"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPzBaeK1XlOq2qdltvWoaOM);
+    color: #fff!important
+}
+.data.studio span a[href$="/7"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwBJkz7849Jh6v3c7Z0jdj9c);
+    color: #fff!important
+}
+.data.studio span a[href$="/456"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKa4jrT9_Ad8J53Ey_YPkwE);
+    color: #fff!important
+}
+.data.studio span a[href$="/287"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwEoOP4PMLusJiC2p5Jt4g-g);
+    color: #fff!important
+}
+.data.studio span a[href$="/132"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPzk1hyBZB73fI9wweTgGMM);
+    color: #fff!important
+}
+.data.studio span a[href$="/18"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCIO0HDbcrolktNxAekwYO0);
+    color: #fff!important
+}
+.data.studio span a[href$="/44"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKWyd-StK73gs8E4pgqD7lmhOb1cRc4TDbW_nj9y1ppl);
+    color: #fff!important
+}
+.data.studio span a[href$="/14"] {
+    background: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwIisOeJd9AWJC29cAIHlZdY);
+    color: #fff!important
+}
+:root {
+    --banner-height: 400px
+}
+.cover-block {
+    height: var(--banner-height)
+}
+.header {
+    margin-top: calc(var(--banner-height) - 36px)
+}
+.list-stats {
+    top: calc(var(--banner-height) + 98px)
+}
+body:not([data-query*='status":7']) .cover-block {
+    display: none
+}
+body:not([data-query*='status":7']) .header {
+    top: calc(74px + 36px);
+    margin: 0 auto -36px
+}
+body:not([data-query*='status":7']) .list-menu-float {
+    width: 1060px;
+    padding-left: 0
+}
+body:not([data-query*='status":7']) .header .header-title {
+    margin-left: 0
+}
+body:not([data-query*='status":7']) .list-unit .list-status-title {
+    height: calc(64px + 36px)
+}
+body:not([data-query*='status":7']) .list-table > tbody:first-of-type {
+    top: calc(-26px + -36px)
+}
+body:not([data-query*='status":7']) .status-menu {
+    padding-left: 71px
+}
+body:not([data-query*='status":7']) .status-menu:after {
+    top: 7px;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    box-shadow: none
+}
+body:not([data-query*='status":7']) .btn-menu a.username {
+    top: -102px;
+    width: 48px;
+    height: 48px
+}
+body[data-owner="1"]:not([data-query*='status":7']) .list-menu-float .icon-menu.profile {
+    top: 8px;
+    width: 48px!important;
+    height: 48px!important
+}
+[data-query*='status":7'] {
+    --banner: url(https://i.imgur.com/ny2JZkd.jpg)
+}
+body[data-query*='status":7'] {
+    --background: url(https://i.imgur.com/XKajZOs.jpg)
+}
+body[data-query*='status":1'] {
+    --background: url(https://i.imgur.com/ZAXETS1.png)
+}
+body[data-query*='status":2'] {
+    --background: url(https://i.imgur.com/luz1LEf.jpg)
+}
+body[data-query*='status":3'] {
+    --background: url(https://i.imgur.com/G9y7hg9.png)
+}
+body[data-query*='status":4'] {
+    --background: url(https://i.imgur.com/eyvQsRM.png)
+}
+body[data-query*='status":6'] {
+    --background: url(https://i.imgur.com/3PRKSC4.jpg)
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Favorite"],
+.data.tags span a[href*="=Favourite"] {
+    position: absolute;
+    left: 190px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Favorite"]:before,
+.data.tags span a[href*="=Favourite"]:before {
+    content: "♥";
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=King"] {
+    position: absolute;
+    left: 220px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=King"]:before {
+    content: "👑";
+    font-size: 16px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Diamond"] {
+    position: absolute;
+    left: 250px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Diamond"]:before {
+    content: "💎";
+    font-size: 15px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Hotdog"] {
+    position: absolute;
+    left: 280px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Hotdog"]:before {
+    content: "🌭";
+    font-size: 15px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Gintama"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Gintama"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwMR7YFl78WKLDPPGyFxZL28);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Chuunibyou"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Chuunibyou"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwO5kID5ZTyahiy-zGcx4zwo);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Monogatari"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Monogatari"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPlDC3tW_SMvq5Mx3SA52ss);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=KnK"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=KnK"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCB7mebLRJ7K_NhW1yUxzIQ);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=MHA"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=MHA"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwI2mXHqqOoX4qwRa8X2QeEI);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=DB"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=DB"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwD-HExosGw51p5d7xVQ7DTo);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=AoT"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=AoT"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwEnpIXutEATxgzFbfFsxK8c);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=S%3BG"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=S%3BG"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCi3FeDpFm5YA8PhJ1kefNE);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Bungou"] {
+    position: absolute;
+    left: 160px;
+    top: calc(50% - -10px);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    color: #ff65ad!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Bungou"]:before {
+    content: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKWuca3-9KPR6Tn74hwfvMc);
+    font-size: 26px
+}
+.data.tags span {
+    padding: 0
+}
+.data.tags span a {
+    margin: 1px 0
+}
+.data.tags span a[href*="=Re-watched"] {
+    position: absolute;
+    left: 577px;
+    top: calc(50% - -20px);
+    height: 22px;
+    padding-right: 5px;
+    padding-left: 5px;
+    background: #555;
+    border-radius: 10%;
+    color: #fff!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 0 0 rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Re-watched"]:before {
+    content: "Re-watched";
+    font-size: 9px
+}
+.data.status {
+    width: 3px!important
+}
+.list-table-data {
+    padding-left: 18px
+}
+:root {
+    --row-tint: rgba(20, 20, 20, 0.4)
+}
+.data.tags span a[href*="=Re-read"] {
+    position: absolute;
+    left: 577px;
+    top: calc(50% - -20px);
+    height: 22px;
+    padding-right: 5px;
+    padding-left: 5px;
+    background: #555;
+    border-radius: 10%;
+    color: #fff!important;
+    font-size: 0!important;
+    line-height: 23px;
+    overflow: hidden;
+    box-shadow: 0 0 0 rgba(0, 0, 0, .2)
+}
+.data.tags span a[href*="=Re-read"]:before {
+    content: "Re-read";
+    font-size: 9px
+}
+.data.status {
+    width: 3px!important
+}
+.list-table-data {
+    padding-left: 18px
+}
+:root {
+    --row-tint: rgba(20, 20, 20, 0.4)
+}
+.data.number,
+.data.priority,
+.data.status:after,
+.data.status:before,
+.list-item {
+    background: linear-gradient(var(--row-tint), var(--row-tint)), var(--background) no-repeat center/cover fixed transparent!important
+}
+footer:after,
+footer:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    z-index: -5;
+    width: calc(50% - 538px);
+    min-width: 262px;
+    height: 100%;
+    background: transparent no-repeat center bottom/contain scroll
+}
+.score-na::before {
+    content: "Not Rated"
+}
+.score-1::before {
+    content: "1 - 🤮"
+}
+.score-2::before {
+    content: "2 - Awful"
+}
+.score-3::before {
+    content: "3 - Bad"
+}
+.score-4::before {
+    content: "4 - Mediocre"
+}
+.score-5::before {
+    content: "5 - Decent"
+}
+.score-6::before {
+    content: "6 - Good"
+}
+.score-7::before {
+    content: "7 - Great"
+}
+.score-8::before {
+    content: "8 - Amazing"
+}
+.score-9::before {
+    content: "9 - Phenomenal"
+}
+.score-10::before {
+    content: "10 - Masterpiece"
+}
+.score-label {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    transition: color .2s ease
+}
+.score-label:hover {
+    color: #fff!important
+}
+.score-label::before {
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    display: block;
+    padding: 4px 8px 4px calc(100% + 12px);
+    padding-left: 6px;
+    background: #111;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity .2s ease;
+    white-space: pre;
+    text-align: left;
+    pointer-events: none
+}
+.score-label:hover::before {
+    opacity: 1
+}
+.status-menu .status-button {
+    transition: color .3s ease
+}
+.status-menu .status-button.on:nth-of-type(1),
+.status-menu .status-button:nth-of-type(1):hover {
+    color: var(--accent)!important
+}
+.status-menu .status-button.on:nth-of-type(2),
+.status-menu .status-button:nth-of-type(2):hover {
+    color: var(--watching)!important
+}
+.status-menu .status-button.on:nth-of-type(3),
+.status-menu .status-button:nth-of-type(3):hover {
+    color: var(--completed)!important
+}
+.status-menu .status-button.on:nth-of-type(4),
+.status-menu .status-button:nth-of-type(4):hover {
+    color: var(--onhold)!important
+}
+.status-menu .status-button.on:nth-of-type(5),
+.status-menu .status-button:nth-of-type(5):hover {
+    color: var(--dropped)!important
+}
+.status-menu .status-button.on:nth-of-type(6),
+.status-menu .status-button:nth-of-type(6):hover {
+    color: var(--plantowatch)!important
+}
+#advanced-options {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    right: 0;
+    display: none;
+    width: 860px;
+    margin: 0 auto;
+    padding: 25px 0 30px;
+    -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    -o-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    -ms-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    color: #fff;
+    text-align: left;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    z-index: 1101;
+    border: none;
+    background-image: url(https://image.myanimelist.net/ui/Yvr-BjrKxhRMFcblA_xHMJEeVZvehtX3b9Ryw9ciBSZXuIGJ6u6DDc1g-pBeT3qO);
+    background-color: rgba(0, 0, 0, .5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%
+}
+.list-table-data:hover {
+    background-color: rgba(50, 50, 50, .35)!important
+}
+.list-item:hover {
+    z-index: 3;
+    transform: scale(1.03)
+}
+.data.type {
+    position: static;
+    width: 50px;
+    padding: 0!important;
+    margin-right: 4px;
+    order: 16;
+    text-align: center!important
+}
+.data.title {
+    padding: 6px!important;
+    height: auto
+}
+.data.title::after {
+    content: none
+}
+.data.title .link.sort {
+    position: static;
+    display: block;
+    padding-right: 0;
+    margin-right: 3px;
+    white-space: normal
+}
+#search-box.open {
+    width: 90px!important;
+    background: var(--cover-bg)
+}
+#copyright {
+    padding: 0;
+    color: var(--text-head);
+    line-height: 16px
+}
+#copyright:after {
+    content: "Original Template Design by Valerio_Lyndon, edits by me! Massive thanks to Valerio_Lyndon for helping me with the MAL List Tool to add MAL scores to the list.";
+    white-space: pre
+}
+.data.score {
+    position: relative;
+    width: 110px;
+    height: 26px;
+    order: 13
+}
+.data.score a {
+    background: #000;
+    width: 30px;
+    font-size: 18px!important;
+    font-family: Inconsolata, monospace!important
+}
+.list-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 0
+}
+.list-table-data {
+    position: relative;
+    display: flex;
+    max-width: 1060px;
+    min-height: 115px;
+    align-items: center;
+    font-size: 0
+}
+.data.licensor span,
+.data.studio span,
+.data.tags span {
+    padding: 0 0
+}
+.data.number {
+    position: relative;
+    top: -25px;
+    right: 9px
+}
+.data.score .score-10 {
+    color: #00fff7!important
+}
+.data.score .score-9 {
+    color: #3f0!important
+}
+.data.score .score-8 {
+    color: #6f0!important
+}
+.data.score .score-7 {
+    color: #9f0!important
+}
+.data.score .score-6 {
+    color: #cf0!important
+}
+.data.score .score-5 {
+    color: #ff0!important
+}
+.data.score .score-4 {
+    color: #fc0!important
+}
+.data.score .score-3 {
+    color: #f90!important
+}
+.data.score .score-2 {
+    color: #f60!important
+}
+.data.score .score-1 {
+    color: red!important
+}
+[data-query*='"status":7']:not([data-query*=order]):not([data-query*='tag"']):not([data-query*='"s"']) .list-item:nth-child(2) {
+    margin-top: 10px
+}
+[data-query*='"status":7']:not([data-query*=order]):not([data-query*='tag"']):not([data-query*='"s"']) .list-item .status:after {
+    content: "";
+    top: auto;
+    bottom: -26px;
+    height: 0;
+    border-width: 0 0 0 2px;
+    border-radius: 0
+}
+.list-item .reading:after,
+.list-item .reading:before,
+.list-item .watching:after,
+.list-item .watching:before {
+    border-color: var(--watching)
+}
+.list-item .completed:after,
+.list-item .completed:before {
+    border-color: var(--completed)
+}
+.list-item .onhold:after,
+.list-item .onhold:before {
+    border-color: var(--onhold)
+}
+.list-item .dropped:after,
+.list-item .dropped:before {
+    border-color: var(--dropped)
+}
+.list-item .plantoread:after,
+.list-item .plantoread:before,
+.list-item .plantowatch:after,
+.list-item .plantowatch:before {
+    border-color: var(--plantowatch)
+}
+.reading ~ .data,
+.watching ~ .data {
+    --item-category: var(--watching);
+    --item-category-contrast: #fff
+}
+.completed ~ .data {
+    --item-category: var(--completed);
+    --item-category-contrast: #fff
+}
+.onhold ~ .data {
+    --item-category: var(--onhold);
+    --item-category-contrast: #fff
+}
+.dropped ~ .data {
+    --item-category: var(--dropped);
+    --item-category-contrast: #fff
+}
+.plantoread ~ .data,
+.plantowatch ~ .data {
+    --item-category: var(--plantowatch);
+    --item-category-contrast: #000
+}
+.data.image a {
+    overflow: visible
+}
+.data.image a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -177px;
+    z-index: 50;
+    width: 135px;
+    height: 0;
+    background: var(--bg-dark) no-repeat center/cover;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease
+}
+.list-item:hover .data.image a:before {
+    top: calc(50% - 100px);
+    height: 188px;
+    opacity: 1
+}
+.data.image a:after,
+.data.image img {
+    border-radius: 50%
+}
+.data.image::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -18px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--item-category);
+    opacity: 0;
+    transition: opacity .25s ease
+}
+.list-item:hover .data.image::before {
+    opacity: 1;
+    transition-delay: 50ms
+}
+.data.image a::before {
+    border: 3px solid var(--item-category);
+    box-sizing: border-box
+}
+:root {
+    --left-text: none;
+    --right-text: "Sub-Rating Descriptions:\a \a Plot: Concept, development, twists, ending, and a whole lot of bias.\a \a Visuals: Art style or animation. (Tag just marks art/animation that stuck with me)\a \a Characters: Depth, development, likeability, and attachment.\a \a Sound: OP, ED, OST, and sound effects. Usually not rated if I don't remember OST.\a \a Enjoyment: I dunno... Basically depends on what phase I was in when watching it, and some random other shit.\a \a Lemme also say this: I don't trust myself to have been consistent in assigning the sub-ratings, so please take it with a huge ass grain of salt. Like an entire block of rock salt. \a \a \a In addition, whole numbers aren't adequate for precise ratings, so I have a sheet where I rate shows one by one, and it has a ton of other stuff on it too. It also solves the issue of thinking about multiple seasons separately.\a \a Check it out by going to my profile bio. It's pretty large and filled with cool shit if I don't say so myself."
+}
+.list-unit::after,
+.list-unit::before {
+    position: absolute;
+    top: 72px;
+    min-width: 90px;
+    max-width: 178px;
+    padding: 8px;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 3px;
+    white-space: pre-wrap;
+    pointer-events: none;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff
+}
+.fixed + .list-block .list-unit::after,
+.fixed + .list-block .list-unit::before {
+    position: fixed;
+    top: 72px
+}
+.list-unit::after {
+    content: var(--right-text);
+    left: calc(50% + 560px)
+}
+[data-query*='status":7'] .list-unit::after,
+[data-query*='status":7'] .list-unit::before {
+    top: 472px
+}
+.data.tags {
+    --x-offset: 300px;
+    --y-offset: calc(50% + 17.5px)
+}
+.data.tags div:after {
+    content: "";
+    position: absolute;
+    top: var(--y-offset);
+    left: var(--x-offset);
+    width: 98px;
+    height: 17px;
+    --i: var(--bg);
+    background-image: linear-gradient(to right, #24986d 0, #24986d 18px, transparent 18px, transparent 20px, #e77b49 20px, #e77b49 38px, transparent 38px, transparent 40px, #0095a4 40px, #0095a4 58px, transparent 58px, transparent 60px, #03da38 60px, #03da38 78px, transparent 78px, transparent 80px, #b5b350 80px, #b5b350 98px);
+    border-radius: 8.5px
+}
+.data.tags a[href$="tag=-"],
+.data.tags a[href$="tag=1"],
+.data.tags a[href$="tag=10"],
+.data.tags a[href$="tag=2"],
+.data.tags a[href$="tag=3"],
+.data.tags a[href$="tag=4"],
+.data.tags a[href$="tag=5"],
+.data.tags a[href$="tag=6"],
+.data.tags a[href$="tag=7"],
+.data.tags a[href$="tag=8"],
+.data.tags a[href$="tag=9"],
+.data.tags a[href$="tag=11"] {
+    position: absolute;
+    top: var(--y-offset);
+    z-index: 1;
+    width: 18px;
+    padding: 1px 0;
+    margin: 0;
+    pointer-events: auto
+}
+.data.tags a[href$="tag=-"]:hover,
+.data.tags a[href$="tag=1"]:hover,
+.data.tags a[href$="tag=10"]:hover,
+.data.tags a[href$="tag=2"]:hover,
+.data.tags a[href$="tag=3"]:hover,
+.data.tags a[href$="tag=4"]:hover,
+.data.tags a[href$="tag=5"]:hover,
+.data.tags a[href$="tag=6"]:hover,
+.data.tags a[href$="tag=7"]:hover,
+.data.tags a[href$="tag=8"]:hover,
+.data.tags a[href$="tag=9"]:hover,
+.data.tags a[href$="tag=11"]:hover {
+    cursor: default;
+    background: 0 0!important
+}
+.data.tags span:nth-last-child(5) a[href$="tag=-"],
+.data.tags span:nth-last-child(5) a[href$="tag=1"],
+.data.tags span:nth-last-child(5) a[href$="tag=10"],
+.data.tags span:nth-last-child(5) a[href$="tag=2"],
+.data.tags span:nth-last-child(5) a[href$="tag=3"],
+.data.tags span:nth-last-child(5) a[href$="tag=4"],
+.data.tags span:nth-last-child(5) a[href$="tag=5"],
+.data.tags span:nth-last-child(5) a[href$="tag=6"],
+.data.tags span:nth-last-child(5) a[href$="tag=7"],
+.data.tags span:nth-last-child(5) a[href$="tag=8"],
+.data.tags span:nth-last-child(5) a[href$="tag=9"],
+.data.tags span:nth-last-child(5) a[href$="tag=11"] {
+    left: var(--x-offset);
+    border-radius: 8.5px 0 0 8.5px;
+    color: var(--text)!important
+}
+.data.tags span:nth-last-child(4) a[href$="tag=-"],
+.data.tags span:nth-last-child(4) a[href$="tag=1"],
+.data.tags span:nth-last-child(4) a[href$="tag=10"],
+.data.tags span:nth-last-child(4) a[href$="tag=2"],
+.data.tags span:nth-last-child(4) a[href$="tag=3"],
+.data.tags span:nth-last-child(4) a[href$="tag=4"],
+.data.tags span:nth-last-child(4) a[href$="tag=5"],
+.data.tags span:nth-last-child(4) a[href$="tag=6"],
+.data.tags span:nth-last-child(4) a[href$="tag=7"],
+.data.tags span:nth-last-child(4) a[href$="tag=8"],
+.data.tags span:nth-last-child(4) a[href$="tag=9"],
+.data.tags span:nth-last-child(4) a[href$="tag=11"] {
+    left: calc(var(--x-offset) + 20px);
+    border-radius: 0;
+    color: var(--text)!important
+}
+.data.tags span:nth-last-child(3) a[href$="tag=-"],
+.data.tags span:nth-last-child(3) a[href$="tag=1"],
+.data.tags span:nth-last-child(3) a[href$="tag=10"],
+.data.tags span:nth-last-child(3) a[href$="tag=2"],
+.data.tags span:nth-last-child(3) a[href$="tag=3"],
+.data.tags span:nth-last-child(3) a[href$="tag=4"],
+.data.tags span:nth-last-child(3) a[href$="tag=5"],
+.data.tags span:nth-last-child(3) a[href$="tag=6"],
+.data.tags span:nth-last-child(3) a[href$="tag=7"],
+.data.tags span:nth-last-child(3) a[href$="tag=8"],
+.data.tags span:nth-last-child(3) a[href$="tag=9"],
+.data.tags span:nth-last-child(3) a[href$="tag=11"] {
+    left: calc(var(--x-offset) + 40px);
+    border-radius: 0;
+    color: var(--text)!important
+}
+.data.tags span:nth-last-child(2) a[href$="tag=-"],
+.data.tags span:nth-last-child(2) a[href$="tag=1"],
+.data.tags span:nth-last-child(2) a[href$="tag=10"],
+.data.tags span:nth-last-child(2) a[href$="tag=2"],
+.data.tags span:nth-last-child(2) a[href$="tag=3"],
+.data.tags span:nth-last-child(2) a[href$="tag=4"],
+.data.tags span:nth-last-child(2) a[href$="tag=5"],
+.data.tags span:nth-last-child(2) a[href$="tag=6"],
+.data.tags span:nth-last-child(2) a[href$="tag=7"],
+.data.tags span:nth-last-child(2) a[href$="tag=8"],
+.data.tags span:nth-last-child(2) a[href$="tag=9"],
+.data.tags span:nth-last-child(2) a[href$="tag=11"] {
+    left: calc(var(--x-offset) + 60px);
+    border-radius: 0;
+    color: var(--text)!important
+}
+.data.tags span:nth-last-child(1) a[href$="tag=-"],
+.data.tags span:nth-last-child(1) a[href$="tag=1"],
+.data.tags span:nth-last-child(1) a[href$="tag=10"],
+.data.tags span:nth-last-child(1) a[href$="tag=2"],
+.data.tags span:nth-last-child(1) a[href$="tag=3"],
+.data.tags span:nth-last-child(1) a[href$="tag=4"],
+.data.tags span:nth-last-child(1) a[href$="tag=5"],
+.data.tags span:nth-last-child(1) a[href$="tag=6"],
+.data.tags span:nth-last-child(1) a[href$="tag=7"],
+.data.tags span:nth-last-child(1) a[href$="tag=8"],
+.data.tags span:nth-last-child(1) a[href$="tag=9"],
+.data.tags span:nth-last-child(1) a[href$="tag=11"] {
+    left: calc(var(--x-offset) + 80px);
+    border-radius: 0 8.5px 8.5px 0;
+    color: var(--text)!important
+}
+a[href$="tag=-"]:before,
+a[href$="tag=1"]:before,
+a[href$="tag=10"]:before,
+a[href$="tag=2"]:before,
+a[href$="tag=3"]:before,
+a[href$="tag=4"]:before,
+a[href$="tag=5"]:before,
+a[href$="tag=6"]:before,
+a[href$="tag=7"]:before,
+a[href$="tag=8"]:before,
+a[href$="tag=9"]:before,
+a[href$="tag=11"]:before {
+    content: ""!important;
+    position: absolute;
+    top: 17px;
+    left: calc(50% - 5px);
+    z-index: 5;
+    display: block;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--text-dim) transparent;
+    opacity: 0;
+    transition: opacity .15s ease;
+    pointer-events: none
+}
+a[href$="tag=-"]:after,
+a[href$="tag=1"]:after,
+a[href$="tag=10"]:after,
+a[href$="tag=2"]:after,
+a[href$="tag=3"]:after,
+a[href$="tag=4"]:after,
+a[href$="tag=5"]:after,
+a[href$="tag=6"]:after,
+a[href$="tag=7"]:after,
+a[href$="tag=8"]:after,
+a[href$="tag=9"]:after,
+a[href$="tag=11"]:after {
+    content: "Plot";
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    z-index: 5;
+    display: block;
+    width: auto;
+    max-width: 340px;
+    height: auto;
+    padding: 4px 8px;
+    background: var(--btn-bg);
+    border: 1px solid var(--text-dim);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--text);
+    font: 11px/15px Arial, Verdana;
+    text-align: left;
+    white-space: pre-wrap;
+    opacity: 0;
+    transition: opacity .15s ease;
+    transform: translateX(-50%);
+    pointer-events: none
+}
+a[href$="tag=-"]:hover:after,
+a[href$="tag=-"]:hover:before,
+a[href$="tag=1"]:hover:after,
+a[href$="tag=1"]:hover:before,
+a[href$="tag=10"]:hover:after,
+a[href$="tag=10"]:hover:before,
+a[href$="tag=2"]:hover:after,
+a[href$="tag=2"]:hover:before,
+a[href$="tag=3"]:hover:after,
+a[href$="tag=3"]:hover:before,
+a[href$="tag=4"]:hover:after,
+a[href$="tag=4"]:hover:before,
+a[href$="tag=5"]:hover:after,
+a[href$="tag=5"]:hover:before,
+a[href$="tag=6"]:hover:after,
+a[href$="tag=6"]:hover:before,
+a[href$="tag=7"]:hover:after,
+a[href$="tag=7"]:hover:before,
+a[href$="tag=8"]:hover:after,
+a[href$="tag=8"]:hover:before,
+a[href$="tag=9"]:hover:after,
+a[href$="tag=9"]:hover:before,
+a[href$="tag=11"]:hover:after,
+a[href$="tag=11"]:hover:before {
+    opacity: 1
+}
+span:nth-last-child(4) a[href$="tag=-"]:after,
+span:nth-last-child(4) a[href$="tag=1"]:after,
+span:nth-last-child(4) a[href$="tag=10"]:after,
+span:nth-last-child(4) a[href$="tag=2"]:after,
+span:nth-last-child(4) a[href$="tag=3"]:after,
+span:nth-last-child(4) a[href$="tag=4"]:after,
+span:nth-last-child(4) a[href$="tag=5"]:after,
+span:nth-last-child(4) a[href$="tag=6"]:after,
+span:nth-last-child(4) a[href$="tag=7"]:after,
+span:nth-last-child(4) a[href$="tag=8"]:after,
+span:nth-last-child(4) a[href$="tag=9"]:after,
+span:nth-last-child(4) a[href$="tag=11"]:after {
+    content: "Visuals"
+}
+span:nth-last-child(3) a[href$="tag=-"]:after,
+span:nth-last-child(3) a[href$="tag=1"]:after,
+span:nth-last-child(3) a[href$="tag=10"]:after,
+span:nth-last-child(3) a[href$="tag=2"]:after,
+span:nth-last-child(3) a[href$="tag=3"]:after,
+span:nth-last-child(3) a[href$="tag=4"]:after,
+span:nth-last-child(3) a[href$="tag=5"]:after,
+span:nth-last-child(3) a[href$="tag=6"]:after,
+span:nth-last-child(3) a[href$="tag=7"]:after,
+span:nth-last-child(3) a[href$="tag=8"]:after,
+span:nth-last-child(3) a[href$="tag=9"]:after,
+span:nth-last-child(3) a[href$="tag=11"]:after {
+    content: "Characters"
+}
+span:nth-last-child(2) a[href$="tag=-"]:after,
+span:nth-last-child(2) a[href$="tag=1"]:after,
+span:nth-last-child(2) a[href$="tag=10"]:after,
+span:nth-last-child(2) a[href$="tag=2"]:after,
+span:nth-last-child(2) a[href$="tag=3"]:after,
+span:nth-last-child(2) a[href$="tag=4"]:after,
+span:nth-last-child(2) a[href$="tag=5"]:after,
+span:nth-last-child(2) a[href$="tag=6"]:after,
+span:nth-last-child(2) a[href$="tag=7"]:after,
+span:nth-last-child(2) a[href$="tag=8"]:after,
+span:nth-last-child(2) a[href$="tag=9"]:after,
+span:nth-last-child(2) a[href$="tag=11"]:after {
+    content: "Sound"
+}
+span:nth-last-child(1) a[href$="tag=-"]:after,
+span:nth-last-child(1) a[href$="tag=1"]:after,
+span:nth-last-child(1) a[href$="tag=10"]:after,
+span:nth-last-child(1) a[href$="tag=2"]:after,
+span:nth-last-child(1) a[href$="tag=3"]:after,
+span:nth-last-child(1) a[href$="tag=4"]:after,
+span:nth-last-child(1) a[href$="tag=5"]:after,
+span:nth-last-child(1) a[href$="tag=6"]:after,
+span:nth-last-child(1) a[href$="tag=7"]:after,
+span:nth-last-child(1) a[href$="tag=8"]:after,
+span:nth-last-child(1) a[href$="tag=9"]:after,
+span:nth-last-child(1) a[href$="tag=11"]:after {
+    content: "Enjoyment"
+}
+.list-table .list-table-header .header-title.score {
+    position: absolute;
+    right: 450px;
+    opacity: 1;
+    pointer-events: auto
+}
+.list-table .list-table-header .header-title.score .link {
+    width: 100px!important;
+    margin: 0;
+    border-radius: 13px;
+    background: var(--bg);
+    text-indent: 0;
+    opacity: 1
+}
+.list-table .list-table-header .header-title.score .link::before {
+    content: "Sort by "
+}
